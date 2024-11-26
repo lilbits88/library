@@ -1,4 +1,4 @@
-const myLibrary = [];
+const bookshelf = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -6,27 +6,32 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
   this.info = function() {
-    return `${this.title}, ${this.author}, ${this.pages}, ${this.read}`
+    return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
   }
 }
 
-function addBookToLibrary(title, author, pages, read) {
-  const book = new Book(title, author, pages, read);
-  myLibrary.push(book);
-  console.log(myLibrary)
+function addBook(title, author, pages, read) {
+  bookshelf.push(new Book(title, author, pages, read));
+  displayBook()
 }
 
-addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', '324', 'no');
-addBookToLibrary('Pride and Prejudice', 'Jane Austen', '294', 'no');
-addBookToLibrary('Moby Dick', 'Herman Melville', '585', 'yes');
+addBook('To Kill a Mockingbird', 'Harper Lee', '324', 'no');
+addBook('Pride and Prejudice', 'Jane Austen', '294', 'no');
+addBook('Moby Dick', 'Herman Melville', '585', 'yes');
 
-function displayBook(myLibrary) {
-  myLibrary.forEach(book => {
-    console.log(book.info())
-  });
+function displayBook() {
+  const library = document.querySelector('.library');
+
+  bookshelf.forEach( book => {
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.textContent = `${book.info()}`
+  library.appendChild(card)
+
+  })
 }
+displayBook()
 
-displayBook(myLibrary);
 
 /*const myLibrary = [];
 
