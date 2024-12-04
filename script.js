@@ -76,10 +76,10 @@ document.querySelector("#new-book-form").addEventListener("submit", (e) => {
   } else {
     alert("Please fill out all fields!");
   }
-});
+}); */
 
 
-// Initial dummy data for testing
+/* Initial dummy data for testing
 addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, 'yes');
 addBookToLibrary('1984', 'George Orwell', 328, 'no'); 
 

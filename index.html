@@ -9,31 +9,15 @@
   <title>Library</title>
 </head>
 <body>
-  <header>
-    <h1>My Library</h1>
-    <button id="show-form-btn">Add New Book</button>
-  </header>
+  <nav>
+  <h1>LIBRARY</h1>
+  <button class="addBook">Add New Book</button>
+  </nav>
+  <div class="library"></div>
+  <!-- need an event listener on book button  that displays a card on the dom -->
 
-  <main>
-    <section id="library"></section>
-    <form id="new-book-form" style="display: none;">
-      <h2>Add a New Book</h2>
-      <label for="title">Title:</label>
-      <input type="text" id="title" required>
-      
-      <label for="author">Author:</label>
-      <input type="text" id="author" required>
-      
-      <label for="pages">Pages:</label>
-      <input type="number" id="pages" required>
-      
-      <label for="read">Read:</label>
-      <input type="checkbox" id="read">
-      
-      <button type="submit">Add Book</button>
-    </form>
-  </main>
 
+  
   <script src="script.js"></script>
 </body>
 </html>
